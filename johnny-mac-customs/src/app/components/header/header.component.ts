@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +15,20 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openSocialMediaLink(platform: string) {
+    switch (platform) {
+      case 'IG':
+        window.open('https://www.instagram.com/johnnymackcustoms/?hl=en', '_blank');
+        break;
+      case 'FB':
+        window.open('https://www.facebook.com/JohnnyMack-Customs-2019200038391253/', '_blank');
+        break;
+      case 'LI':
+        window.open('https://www.linkedin.com/in/johnny-mack-customs-66b186169/', '_blank');
+        break;
+    }
   }
 
 }

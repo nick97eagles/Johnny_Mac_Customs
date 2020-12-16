@@ -1,20 +1,37 @@
 <div>
-  <mat-toolbar class="header-container">
-    <button mat-icon-button class="menu-expand-button">
-      <mat-icon id="menu-expand-icon">menu</mat-icon>
-    </button>
-    <span id="temp-photo-holder">Johnny Mac Customs</span>
-    <span class="spacer"></span>
-    <div class="brand-icon-container">
-      <button mat-icon-button>
-        <fa-icon class="brand-icons" [icon]="instagram" size="lg"></fa-icon>
-      </button>
-      <button mat-icon-button>
-        <fa-icon class="brand-icons" [icon]="facebook" size="lg"></fa-icon>
-      </button>
-      <button mat-icon-button>
-        <fa-icon class="brand-icons" [icon]="linkedIn" size ="lg"></fa-icon>
-      </button>
-    </div>
-  </mat-toolbar>
+  <!-- SidBar -->
+  <mat-sidenav-container class="drawer-container" hasBackDrop="true">
+    <mat-sidenav #drawer mode="over">
+      <app-comments></app-comments>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar class="header-container">
+        <button mat-icon-button class="menu-expand-button" (click)="drawer.toggle()">
+          <mat-icon id="menu-expand-icon">menu</mat-icon>
+        </button>
+        <a mat-button id="temp-photo-holder" class="header-link" href="/home">Johnny Mac Customs</a>
+        <span style="color:white">|</span>
+        <div>
+          <a mat-button class="header-link" href="/about">About</a>
+          <button mat-button class="header-link" [matMenuTriggerFor]="restorations">Restorations</button>
+          <mat-menu #restorations="matMenu">
+            <a mat-menu-item>Car 1</a>
+            <a mat-menu-item>Car 2</a>
+          </mat-menu>
+        </div>
+        <span class="spacer"></span>
+        <div class="brand-icon-container">
+          <button mat-icon-button (click)="openSocialMediaLink('IG')">
+            <fa-icon class="brand-icons" [icon]="instagram" size="lg"></fa-icon>
+          </button>
+          <button mat-icon-button (click)="openSocialMediaLink('FB')">
+            <fa-icon class="brand-icons" [icon]="facebook" size="lg"></fa-icon>
+          </button>
+          <button mat-icon-button (click)="openSocialMediaLink('LI')">
+            <fa-icon class="brand-icons" [icon]="linkedIn" size ="lg"></fa-icon>
+          </button>
+        </div>
+      </mat-toolbar>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
