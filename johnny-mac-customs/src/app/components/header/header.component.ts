@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { SidenavService } from '../../services/sidenav.service';
+import { SidenavService } from '../sidenav/sidenav.service';
 
 @Component({
   selector: 'app-header',

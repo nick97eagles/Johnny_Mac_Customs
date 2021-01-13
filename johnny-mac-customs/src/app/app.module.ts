@@ -10,7 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // Angular Material
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { SidenavService } from './services/sidenav.service';
+import { SidenavService } from './components/sidenav/sidenav.service';
 
 @NgModule({
   declarations: [

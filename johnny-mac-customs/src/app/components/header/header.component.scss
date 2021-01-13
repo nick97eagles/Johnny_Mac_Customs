@@ -20,6 +20,10 @@
   color: white;
 }
 
+.menu-expand-button {
+  display: none;
+}
+
 .brand-icons {
   color: white;
 }
@@ -35,3 +39,18 @@
 .spacer {
   flex: 1 1 auto;
 }
+
+.nav-items {
+  display: inline-block;
+}
+
+@media(max-width: 700px) {
+  .menu-expand-button {
+    display: inline-block;
+  }
+
+  .nav-items {
+    display: none;
+  }
+}
+
