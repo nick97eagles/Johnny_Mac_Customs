@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderModule } from './components/header/header.module';
 import { ComponentsModule } from './components/components.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+// Angular Material
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { SidenavService } from './services/sidenav.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +21,13 @@ import { ComponentsModule } from './components/components.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HeaderModule,
-    ComponentsModule
+    ComponentsModule,
+    FontAwesomeModule,
+    MatSidenavModule,
   ],
-  providers: [],
+  providers: [
+    SidenavService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

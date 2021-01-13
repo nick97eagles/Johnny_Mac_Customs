@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { SidenavService } from '../../services/sidenav.service';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +9,13 @@ import { faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-sv
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() hasToggled = new EventEmitter<boolean>();
+
   instagram = faInstagram;
   facebook = faFacebook;
   linkedIn = faLinkedin;
 
-  constructor() { }
+  constructor(private sidenavService: SidenavService) { }
 
   ngOnInit(): void {
   }
@@ -29,6 +32,10 @@ export class HeaderComponent implements OnInit {
         window.open('https://www.linkedin.com/in/johnny-mack-customs-66b186169/', '_blank');
         break;
     }
+  }
+
+  toggleMenu() {
+    this.sidenavService.toggle();
   }
 
 }
