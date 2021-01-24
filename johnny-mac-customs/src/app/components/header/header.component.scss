@@ -1,5 +1,5 @@
 .header-container {
-  background-color: rgba(0, 0, 0, 0.836);
+  background-color: rgba(255, 49, 49, 0.694);
 }
 
 .header-link {
@@ -9,14 +9,18 @@
 }
 
 .header-link:hover {
-  background-color: rgb(79, 79, 79);
+  background-color: rgb(0, 0, 0);
 }
 
-#temp-photo-holder {
+.header-logo-link {
   color: white;
 }
 
 #menu-expand-icon {
+  color: white;
+}
+
+#hidden-menu-expand-icon {
   color: white;
 }
 
@@ -44,6 +48,10 @@
   display: inline-block;
 }
 
+.hidden-menu-button {
+  display: none;
+}
+
 @media(max-width: 700px) {
   .menu-expand-button {
     display: inline-block;
@@ -52,5 +60,28 @@
   .nav-items {
     display: none;
   }
+
+  .spacer {
+    display: none;
+  }
+
+  .brand-icon-container {
+    display: none;
+  }
+
+  .header-logo-link {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hidden-menu-button {
+    display: inline-block;
+    visibility: hidden;
+  }
 }
 
+#header-logo {
+  width: 90px;
+  height: 40px;
+}

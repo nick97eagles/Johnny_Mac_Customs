@@ -3,7 +3,9 @@
     <button mat-icon-button class="menu-expand-button" (click)="toggleMenu()">
       <mat-icon id="menu-expand-icon">menu</mat-icon>
     </button>
-    <a mat-button id="temp-photo-holder" class="header-link" href="/home">Johnny Mac Customs</a>
+    <a mat-button class="header-logo-link" href="/home">
+      <img id="header-logo" src="../../../assets/CARLOGO3.png" alt="Car Logo">
+    </a>
     <div class="nav-items">
       <a mat-button class="header-link" href="/about">About</a>
       <button mat-button class="header-link" [matMenuTriggerFor]="restorations">Restorations</button>
@@ -24,5 +26,9 @@
         <fa-icon class="brand-icons" [icon]="linkedIn" size ="lg"></fa-icon>
       </button>
     </div>
+    <!-- This button is always hidden -->
+    <button mat-icon-button class="hidden-menu-button">
+      <mat-icon id="hidden-menu-expand-icon">menu</mat-icon>
+    </button>
   </mat-toolbar>
 </div>
