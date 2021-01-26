@@ -1,0 +1,29 @@
+.home-page-video {
+  width: 1000px;
+  height: 500px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media (max-width: 769px) {
+  .home-page-video {
+    width: 650px;
+    height: 300px;
+  }
+}
+
+@media(max-width: 700px) {
+  .home-page-video {
+    width: 350px;
+    height: 250px;
+  }
+}
+
+@media(max-width: 374px) {
+  .home-page-video {
+    width: 250px;
+    height: 150px;
+  }
+}
