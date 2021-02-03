@@ -1,3 +1,13 @@
 <div class="sidenav">
   <h1 class="sidenav_title">Menu</h1>
+  <ul class="sidenav_menu">
+    <li class="sidenav_item">
+      <a [routerLink]="['/home']" (click)="closeSideNav()">Home</a>
+    </li>
+    <hr class="divider">
+    <li class="sidenav_item">
+      <a [routerLink]="['/about']" (click)="closeSideNav()">About</a>
+    </li>
+    <hr class="divider">
+  </ul>
 </div>

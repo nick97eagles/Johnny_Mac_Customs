@@ -75,5 +75,11 @@
   .home-page-video {
     margin-top: 5;
   }
+}
 
+@media(max-width: 321px) {
+  .home-page-video {
+    width: 300px;
+    margin-top: 2px;
+  }
 }

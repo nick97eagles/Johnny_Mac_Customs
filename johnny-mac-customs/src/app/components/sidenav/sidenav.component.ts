@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { SidenavService } from '../sidenav/sidenav.service';
 
 @Component({
   selector: 'app-comments',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })
-export class CommentsComponent implements OnInit {
+export class SideNavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sidenavService: SidenavService) { }
 
   ngOnInit(): void {
+  }
+
+  closeSideNav() {
+    this.sidenavService.close();
   }
 
 }
