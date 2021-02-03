@@ -123,6 +123,10 @@
               "devServerTarget": "johnny-mac-customs:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
