@@ -3,16 +3,17 @@
     <button mat-icon-button class="menu-expand-button" (click)="toggleMenu()">
       <mat-icon id="menu-expand-icon">menu</mat-icon>
     </button>
-    <a mat-button class="header-logo-link" href="/home">
+    <a mat-button class="header-logo-link" [routerLink]="['/home']">
       <img id="header-logo" src="../../../assets/images/CARLOGO3.png" alt="Car Logo">
     </a>
     <div class="nav-items">
-      <a mat-button class="header-link" href="/about">About</a>
-      <button mat-button class="header-link" [matMenuTriggerFor]="restorations">Restorations</button>
+      <a mat-button class="header-link" [routerLink]="['/home']">Home</a>
+      <a mat-button class="header-link" [routerLink]="['/about']">About</a>
+      <!-- <button mat-button class="header-link" [matMenuTriggerFor]="restorations">Restorations</button>
       <mat-menu #restorations="matMenu">
         <a mat-menu-item>Car 1</a>
         <a mat-menu-item>Car 2</a>
-      </mat-menu>
+      </mat-menu> -->
     </div>
     <span class="spacer"></span>
     <div class="brand-icon-container">

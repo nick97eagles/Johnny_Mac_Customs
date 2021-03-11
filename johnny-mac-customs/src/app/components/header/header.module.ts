@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ComponentsModule } from '../components.module';
+import { RouterModule } from '@angular/router';
 
 // Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -20,6 +21,7 @@ import { MatMenuModule } from '@angular/material/menu';
     FontAwesomeModule,
     MatMenuModule,
     ComponentsModule,
+    RouterModule,
   ],
   exports: [
     HeaderComponent,
