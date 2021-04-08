@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { SidenavService } from './components/sidenav/sidenav.service';
+import { NotesService } from './app.test.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,11 @@ export class AppComponent implements AfterViewInit{
 
   @ViewChild('sidenav') public sidenav: MatSidenav;
 
-  constructor(private sidenavService: SidenavService) { }
+  constructor(private sidenavService: SidenavService, private notesService: NotesService) {
+    // this.notesService.get().subscribe(resp => {
+    //   console.log(resp);
+    // });
+  }
 
   ngAfterViewInit() {
     this.sidenavService.setSidenav(this.sidenav);

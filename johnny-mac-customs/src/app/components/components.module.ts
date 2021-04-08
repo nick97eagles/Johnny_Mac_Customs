@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home-page/home-page.component';
+import { AboutComponent } from './about-page/about-page.component';
 import { SideNavComponent } from './sidenav/sidenav.component';
 import { RouterModule } from '@angular/router';
 
