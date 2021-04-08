@@ -26,6 +26,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "firebase": "^8.3.0",
+    "mdbootstrap": "^4.19.2",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
